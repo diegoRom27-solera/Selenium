@@ -2,6 +2,8 @@ package pages;
 
 public class PaginaPrincipal extends BasePage {
     private String sectionLink = "//a[normalize-space()='%s' and @href]";
+    private String elegirUnPlanButton = "//a[normalize-space()='Elegir Plan' and @href]";
+
     public PaginaPrincipal (){
         // para poder inicializar la base page necesitamos utilizar el elemento driver
         // super lo que hace es inicializar el constructor de la clase madre 
@@ -18,6 +20,9 @@ public class PaginaPrincipal extends BasePage {
         clickElement(xpathSection);
     }
     
+    public void clickOnElegirPlanButton() {
+        clickElement(elegirUnPlanButton);
+    }
     
     
 }
